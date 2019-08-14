@@ -30,17 +30,20 @@ body, html {
 
 }
 .bgimg-1 {
-  background-image: url("http://www.w3schools.com/howto/img_parallax.jpg");
+//  background-image: url("http://www.w3schools.com/howto/img_parallax.jpg");
+  background-image: url("src/assets/images/London.jpg");
   min-height: 400px;
 }
 
 .bgimg-2 {
-  background-image: url("http://www.w3schools.com/howto/img_parallax2.jpg");
+  //background-image: url("http://www.w3schools.com/howto/img_parallax2.jpg");
+  background-image: url("src/assets/images/Sweden.jpg");
   min-height: 400px;
 }
 
 .bgimg-3 {
-  background-image: url("http://www.w3schools.com/howto/img_parallax3.jpg");
+  //background-image: url("http://www.w3schools.com/howto/img_parallax3.jpg");
+  background-image: url("src/assets/images/Snow.jpg");
   min-height: 400px;
 }
 
