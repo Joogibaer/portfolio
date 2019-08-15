@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import 'src/assets/js/about.js';
 
 @Component({
   selector: 'about',

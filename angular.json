@@ -30,7 +30,10 @@
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "./src/assets/js/about.js",
+
+            ]
           },
           "configurations": {
             "production": {
@@ -87,7 +90,9 @@
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
             ],
-            "scripts": [],
+            "scripts": [
+              "./src/assets/js/about.js",
+            ],
             "assets": [
               "src/favicon.ico",
               "src/assets"

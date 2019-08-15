@@ -1,10 +1,15 @@
+h1{
+  font-family: 'Dancing Script', cursive;
+  text-align: center;
+}
+
 $container-shadow: 0.5rem 0.5rem 2rem 0 rgba(black, 0.2);
 
 $gutter: 30px;
 $border-width: 4px;
-$dot-diameter: 8px;
+$dot-diameter: 20px;
 
-body {
+.ebody {
   background: linear-gradient(55deg,#4E75B9 30%,#5CBF98 90%);
   display: flex;
   align-items: center;
@@ -28,12 +33,12 @@ body {
   background:#fff;
   padding: 100px 50px;
   position: relative;
-  box-shadow: $container-shadow;
+//  box-shadow: $container-shadow;
   &:before {
     content: '';
     position: absolute;
     top: 0px;
-    left:calc(33.5% + 15px); //$gutter/2
+    left:calc(34.3% + 15px); //$gutter/2
     bottom: 0px;
     width: $border-width;
     background: #ddd;
