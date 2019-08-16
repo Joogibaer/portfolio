@@ -1,8 +1,14 @@
 h1{
   font-family: 'Dancing Script', cursive;
   text-align: center;
-}
 
+}
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+}
 $container-shadow: 0.5rem 0.5rem 2rem 0 rgba(black, 0.2);
 
 $gutter: 30px;
