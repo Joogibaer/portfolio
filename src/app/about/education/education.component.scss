@@ -29,7 +29,7 @@ $dot-diameter: 20px;
 
 .timeline {
   width:100%;
-  max-width:800px;
+  max-width:500px;
   background:#fff;
   padding: 100px 50px;
   position: relative;
@@ -38,7 +38,8 @@ $dot-diameter: 20px;
     content: '';
     position: absolute;
     top: 0px;
-    left:calc(34.3% + 15px); //$gutter/2
+    Margin: 5px;
+    left:calc(33.4% + 18px); //$gutter/2
     bottom: 0px;
     width: $border-width;
     background: #ddd;
@@ -58,6 +59,7 @@ $dot-diameter: 20px;
     margin-bottom: .5em;
     float: left;
     width: 33%;
+    left:0.0%;
     padding-right: $gutter;
     text-align: right;
     position: relative;
