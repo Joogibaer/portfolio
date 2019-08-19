@@ -14,6 +14,7 @@ const routes: Routes = [
   { path: 'about/education', component: EducationComponent },
   { path: 'about/skills', component: SkillsComponent },
   { path: '404', component: HomeComponent },
+  { path: 'baertschi', component: HomeComponent },
 
 
 ];
