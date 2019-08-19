@@ -14,6 +14,8 @@ const routes: Routes = [
   { path: 'about/education', component: EducationComponent },
   { path: 'about/skills', component: SkillsComponent },
   { path: 'https://joogibaer.github.io/baertschi/baertschi/', component: HomeComponent },
+  { path: 'baertschi/', component: HomeComponent },
+
 ];
 
 @NgModule({
