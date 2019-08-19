@@ -15,6 +15,7 @@ const routes: Routes = [
   { path: 'about/skills', component: SkillsComponent },
   { path: '404', component: HomeComponent },
   { path: 'baertschi', component: HomeComponent },
+  {path: '**', redirectTo: '/404'}
 
 
 ];
