@@ -13,8 +13,8 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about/education', component: EducationComponent },
   { path: 'about/skills', component: SkillsComponent },
-  { path: 'https://joogibaer.github.io/baertschi/baertschi/', component: HomeComponent },
-  { path: 'baertschi/', component: HomeComponent },
+  { path: '404', component: HomeComponent },
+
 
 ];
 
