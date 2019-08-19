@@ -6,8 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
-
-  constructor() { }
+mail: string;
+domain: string;
+  constructor() {
+  this.mail= "baertschi91"
+  this.domain="gmail.com"
+ }
 
   ngOnInit() {
   }
