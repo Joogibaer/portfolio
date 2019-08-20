@@ -14,6 +14,7 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { EducationComponent } from './about/education/education.component';
 import { SkillsComponent } from './about//skills/skills.component';
+import { ProfessionalComponent } from './about/professional/professional.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { SkillsComponent } from './about//skills/skills.component';
     ContactComponent,
     EducationComponent,
     SkillsComponent,
+    ProfessionalComponent,
   ],
   imports: [
     TooltipModule.forRoot(),//ngx-bootstrap
