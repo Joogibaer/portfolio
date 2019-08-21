@@ -4,7 +4,7 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -36,7 +36,9 @@ import { ProfessionalComponent } from './about/professional/professional.compone
     TabsModule.forRoot(),//ngx-bootstrap
     BrowserAnimationsModule, //Materials
   ],
-  providers: [],
+  providers: [
+    {provide: LocationStrategy, useClass: HashLocationStrategy}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
