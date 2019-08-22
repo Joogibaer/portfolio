@@ -33,3 +33,47 @@ h1{
   font-family: 'Dancing Script', cursive;
   text-align: center;
 }
+.bgimg-skills, .bgimg-education, .bgimg-professional {
+  position: relative;
+  opacity: 0.85;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.bgimg-skills {
+//  background-image: url("http://www.w3schools.com/howto/img_parallax.jpg");
+  background-image: url("src/assets/images/VietnamForest.jpg");
+  min-height: 400px;
+}
+.bgimg-education {
+//  background-image: url("http://www.w3schools.com/howto/img_parallax.jpg");
+  background-image: url("src/assets/images/WrexhamAScrop2.jpg");
+  min-height: 400px;
+//  background-origin: content-box;
+//  padding-top: 1000px;
+background-size: contain;
+
+}
+.bgimg-professional {
+//  background-image: url("http://www.w3schools.com/howto/img_parallax.jpg");
+  background-image: url("src/assets/images/Castle2.jpg");
+  min-height: 400px;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
