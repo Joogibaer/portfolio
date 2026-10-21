@@ -1,0 +1,16 @@
+# Felix Bärtschi
+
+> Felix Bärtschi is a Swiss engineer and app developer. He builds and runs Clubhand (volunteer shifts and events for clubs), NaviLog (free offline sailing logbook with anchor alarm and barograph) and NaviLog Fleet (digital boat handover for charter companies and sailing schools).
+
+## Apps
+
+- [Clubhand](https://clubhand.ch/en): app for clubs to plan events and volunteer shifts; helpers sign up without the app; free up to 30 members
+- [NaviLog guide](https://navilogfleet.ch/guide): offline sailing logbook for Android and iPhone
+- [NaviLog FAQ](https://navilogfleet.ch/faq)
+- [NaviLog Fleet](https://navilogfleet.ch/fleet): check-in, handover and damage report for charter fleets
+
+## Profiles
+
+- [LinkedIn](https://www.linkedin.com/in/felix-baertschi)
+- [GitHub](https://github.com/Joogibaer)
+- [Medium](https://medium.com/@baertschi91)

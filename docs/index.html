@@ -1,29 +1,232 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148375708-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-148375708-1');
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Felix Bärtschi – Engineer and App Developer</title>
+<meta name="description" content="Felix Bärtschi is a Swiss engineer and app developer. He builds Clubhand, the volunteer shift app for clubs, and NaviLog, the offline sailing logbook with NaviLog Fleet for charter companies.">
+<link rel="canonical" href="https://baertschi.dev/">
+<meta property="og:title" content="Felix Bärtschi – Engineer and App Developer">
+<meta property="og:description" content="Swiss engineer building Clubhand, NaviLog and NaviLog Fleet.">
+<meta property="og:image" content="https://baertschi.dev/img/felix.jpg">
+<meta property="og:type" content="profile">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<style>
+  :root {
+    --bg: #f7f8fa; --surface: #ffffff; --ink: #14202b; --muted: #556270;
+    --line: #e3e7ec; --accent: #0f7a8a; --accent-ink: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0b1117; --surface: #121b24; --ink: #e8eef3; --muted: #9aabb9;
+      --line: #22303c; --accent: #4cc3d1; --accent-ink: #06222a;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0b1117; --surface: #121b24; --ink: #e8eef3; --muted: #9aabb9;
+    --line: #22303c; --accent: #4cc3d1; --accent-ink: #06222a;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--ink);
+    font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased; }
+  a { color: var(--accent); }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 0 16px; }
+  header { position: sticky; top: 0; z-index: 10; background: var(--bg); border-bottom: 1px solid var(--line); }
+  .nav { display: flex; align-items: center; justify-content: space-between; min-height: 58px; gap: 12px; }
+  .nav b { white-space: nowrap; }
+  .nav nav { display: flex; gap: 18px; font-size: .95rem; font-weight: 600; }
+  .nav nav a { color: var(--muted); text-decoration: none; }
+  .nav nav a:hover { color: var(--ink); }
+  @media (max-width: 480px) { .nav nav { gap: 12px; font-size: .88rem; } .nav nav a[href="#writing"] { display: none; } }
+  section { padding: 56px 0; }
+  h1 { font-size: clamp(2rem, 6vw, 3rem); line-height: 1.1; margin: 0 0 12px; }
+  h2 { font-size: clamp(1.5rem, 4vw, 2rem); margin: 0 0 8px; }
+  h3 { margin: 0 0 6px; font-size: 1.25rem; }
+  .lead { font-size: 1.15rem; color: var(--muted); margin: 0 0 20px; max-width: 34em; }
+  .hero { display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: center; padding-top: 64px; }
+  .hero img { width: 180px; height: 180px; object-fit: cover; object-position: top; border-radius: 50%; border: 4px solid var(--surface); box-shadow: 0 8px 30px -12px rgba(0,0,0,.35); }
+  @media (max-width: 640px) { .hero { grid-template-columns: 1fr; } .hero img { order: -1; width: 128px; height: 128px; } }
+  .btns { display: flex; gap: 10px; flex-wrap: wrap; }
+  .btn { display: inline-block; padding: 10px 18px; border-radius: 999px; font-weight: 700; text-decoration: none;
+    background: var(--accent); color: var(--accent-ink); }
+  .btn.ghost { background: transparent; color: var(--ink); border: 1px solid var(--line); }
+  .apps { display: grid; gap: 20px; margin-top: 28px; }
+  .app { display: grid; grid-template-columns: 150px 1fr; gap: 24px; align-items: center;
+    background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 22px; }
+  .app img { width: 150px; height: auto; border-radius: 14px; border: 1px solid var(--line); }
+  @media (max-width: 560px) { .app { grid-template-columns: 1fr; } .app img { width: 130px; } }
+  .app p { margin: 0 0 12px; color: var(--muted); }
+  .tag { display: inline-block; font-size: .8rem; font-weight: 700; color: var(--accent); margin-bottom: 4px; letter-spacing: .02em; text-transform: uppercase; }
+  .links { display: flex; gap: 14px; flex-wrap: wrap; font-weight: 600; font-size: .95rem; }
+  .band { background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  ul.plain { padding-left: 20px; margin: 12px 0 0; }
+  ul.plain li { margin: 6px 0; }
+  footer { padding: 28px 0 40px; color: var(--muted); font-size: .9rem; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://baertschi.dev/#felix",
+      "name": "Felix Bärtschi",
+      "url": "https://baertschi.dev/",
+      "image": "https://baertschi.dev/img/felix.jpg",
+      "jobTitle": "Engineer and app developer",
+      "nationality": "Swiss",
+      "alumniOf": [
+        {"@type": "CollegeOrUniversity", "name": "Bern University of Applied Sciences (BFH)"},
+        {"@type": "CollegeOrUniversity", "name": "Glyndŵr University Wrexham"},
+        {"@type": "CollegeOrUniversity", "name": "HFTM Biel"}
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/felix-baertschi",
+        "https://github.com/Joogibaer",
+        "https://medium.com/@baertschi91"
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Clubhand",
+      "url": "https://clubhand.ch/en",
+      "description": "App for clubs to plan events and volunteer shifts; outside helpers sign up without the app.",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "iOS, Android",
+      "author": {"@id": "https://baertschi.dev/#felix"}
+    },
+    {
+      "@type": "MobileApplication",
+      "name": "NaviLog",
+      "url": "https://navilogfleet.ch/guide",
+      "description": "Free offline sailing logbook with GPS trip logging, anchor alarm, man overboard and barograph.",
+      "applicationCategory": "TravelApplication",
+      "operatingSystem": "iOS, Android",
+      "author": {"@id": "https://baertschi.dev/#felix"}
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "NaviLog Fleet",
+      "url": "https://navilogfleet.ch/",
+      "description": "Digital boat check-in, handover and damage report for charter companies and sailing schools.",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "iOS, Android, Web",
+      "author": {"@id": "https://baertschi.dev/#felix"}
+    }
+  ]
+}
 </script>
-
-  <meta charset="utf-8">
-  <title>Baertschi</title>
-  <base href="baertschi">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!---   <link rel="icon" type="image/x-icon" href="favicon.ico"> -->
-  <link rel="shortcut icon" href=".\favicon.ico">
-<link rel="stylesheet" href="styles.f195187f7372813e5ce9.css"></head>
+</head>
 <body>
-  <!--- index.html -->
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+<header>
+  <div class="wrap nav">
+    <b>Felix Bärtschi</b>
+    <nav><a href="#apps">Apps</a><a href="#about">About</a><a href="#writing">Writing</a><a href="#contact">Contact</a></nav>
+  </div>
+</header>
+<main>
+  <section class="wrap hero">
+    <div>
+      <h1>Felix Bärtschi</h1>
+      <p class="lead">Swiss engineer and app developer. I build apps that solve one problem well: <a href="#clubhand">Clubhand</a> for clubs that run on volunteers, and <a href="#navilog">NaviLog</a> for sailors and charter companies.</p>
+      <div class="btns">
+        <a class="btn" href="#apps">See my apps</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/felix-baertschi">LinkedIn</a>
+      </div>
+    </div>
+    <img src="img/felix.jpg" width="360" height="405" alt="Portrait of Felix Bärtschi">
+  </section>
 
-  <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+  <section class="band" id="apps">
+    <div class="wrap">
+      <h2>Apps</h2>
+      <p class="lead">Designed, built and run by me — from the first line of code to the store listing.</p>
+      <div class="apps">
 
-  <app-root></app-root>
-<script type="text/javascript" src="runtime.ec2944dd8b20ec099bf3.js"></script><script type="text/javascript" src="polyfills.9d3a8743be9f041e6ba8.js"></script><script type="text/javascript" src="scripts.1216b4be0933c8af4627.js"></script><script type="text/javascript" src="main.26b6513b819e25e810b0.js"></script></body>
+        <article class="app" id="clubhand">
+          <img src="img/clubhand.jpg" width="360" height="745" alt="Clubhand shift schedule" loading="lazy">
+          <div>
+            <span class="tag">For clubs · iPhone &amp; Android</span>
+            <h3>Clubhand</h3>
+            <p>Volunteer shifts, events and club life in one app. Organisers generate shifts in seconds, members sign themselves up, and outside helpers join via a link or QR poster — no app needed. Free for clubs with up to 30 members, data stored in Switzerland.</p>
+            <div class="links">
+              <a href="https://clubhand.ch/en">clubhand.ch</a>
+              <a href="https://apps.apple.com/app/id6816850012">App Store</a>
+              <a href="https://play.google.com/store/apps/details?id=ch.clubhand.app">Google Play</a>
+              <a href="https://clubhand.ch/guide">Guide</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="app" id="navilog">
+          <img src="img/navilog.jpg" width="360" height="704" alt="NaviLog anchor watch" loading="lazy">
+          <div>
+            <span class="tag">For sailors · iPhone &amp; Android</span>
+            <h3>NaviLog</h3>
+            <p>The offline sailing logbook: automatic GPS trip logging, a physics-based anchor alarm, one-tap man overboard and a barograph from the phone's own barometer. Free, no account needed; a one-time Pro purchase adds exports and cloud backup.</p>
+            <div class="links">
+              <a href="https://navilogfleet.ch/guide">Guide</a>
+              <a href="https://apps.apple.com/app/navilog/id6790909811">App Store</a>
+              <a href="https://play.google.com/store/apps/details?id=com.felix.segel_logbuch_app">Google Play</a>
+              <a href="https://navilogfleet.ch/faq">FAQ</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="app" id="fleet">
+          <img src="img/fleet.jpg" width="360" height="360" alt="NaviLog Fleet logo" loading="lazy">
+          <div>
+            <span class="tag">For charter companies &amp; sailing schools</span>
+            <h3>NaviLog Fleet</h3>
+            <p>Digital boat handover: QR sticker on the boat, mandatory photos, checklist, damage report and signature, a PDF report by e-mail and a web cockpit for the whole fleet. Ends the deposit dispute before it starts. Free for skippers.</p>
+            <div class="links">
+              <a href="https://navilogfleet.ch/">navilogfleet.ch</a>
+              <a href="https://navilogfleet.ch/fleet">How it works</a>
+              <a href="https://app.navilogfleet.ch/?demo=charter">Live demo</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap" id="about">
+    <h2>About</h2>
+    <p>I'm an engineer from Switzerland. I started as an automation engineer at SBB, the Swiss Federal Railways, and became vice world champion in industrial robotics. I hold an Advanced Federal Diploma in System Engineering (HF) from HFTM Biel, a BEng (Hons) in Electrical and Electronic Engineering from Glyndŵr University in Wrexham, UK, and studied Data Science (MAS) at the Bern University of Applied Sciences.</p>
+    <p>As an IT consultant at Accenture I lead technical teams that build prototypes, MVPs and pilots with AI, blockchain and the Internet of Things for international companies. Alongside, I build and run my own apps.</p>
+    <p>My full career is on <a href="https://www.linkedin.com/in/felix-baertschi">LinkedIn</a>.</p>
+  </section>
+
+  <section class="band" id="writing">
+    <div class="wrap">
+      <h2>Writing</h2>
+      <p class="lead">Articles about my apps on <a href="https://medium.com/@baertschi91">Medium</a>.</p>
+      <ul class="plain">
+        <li><a href="https://medium.com/@baertschi91/how-to-organise-volunteers-for-a-club-event-a-step-by-step-guide-96bf6abc8414">How to Organise Volunteers for a Club Event: a Step-by-Step Guide</a></li>
+        <li><a href="https://medium.com/@baertschi91/clubhand-a-volunteer-shift-app-for-clubs-without-spreadsheets-or-group-chat-lists-8b295a61d8ef">Clubhand: a Volunteer Shift App for Clubs</a></li>
+        <li><a href="https://medium.com/@baertschi91/the-best-sailing-logbook-app-is-the-one-that-works-when-everything-else-doesnt-f74d675a376f">The Best Sailing Logbook App Is the One That Works When Everything Else Doesn't</a></li>
+        <li><a href="https://medium.com/@baertschi91/the-complete-guide-to-navilog-your-offline-sailing-logbook-131292926c16">The Complete Guide to NaviLog: Your Offline Sailing Logbook</a></li>
+        <li><a href="https://medium.com/@baertschi91/digital-boat-handover-for-charter-companies-how-navilog-fleet-ends-the-deposit-dispute-0ae5b0c20197">Digital Boat Handover for Charter Companies</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="wrap" id="contact">
+    <h2>Contact</h2>
+    <p class="lead">Questions about my apps, feedback or a project in mind? Write to me.</p>
+    <div class="btns">
+      <a class="btn" href="mailto:baertschi91@gmail.com">baertschi91@gmail.com</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/felix-baertschi">LinkedIn</a>
+      <a class="btn ghost" href="https://github.com/Joogibaer">GitHub</a>
+      <a class="btn ghost" href="https://medium.com/@baertschi91">Medium</a>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap">© 2026 Felix Bärtschi, Switzerland · <a href="https://clubhand.ch/en">Clubhand</a> · <a href="https://navilogfleet.ch/">NaviLog</a></div>
+</footer>
+</body>
 </html>
