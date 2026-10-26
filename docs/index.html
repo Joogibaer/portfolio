@@ -63,6 +63,11 @@
   .band { background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
   ul.plain { padding-left: 20px; margin: 12px 0 0; }
   ul.plain li { margin: 6px 0; }
+  ul.mails { list-style: none; padding: 0; margin: 0 0 24px; display: grid; gap: 10px; }
+  ul.mails li { display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: baseline;
+    background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 12px 16px; }
+  ul.mails span { color: var(--muted); font-size: .9rem; min-width: 11em; }
+  ul.mails a { font-weight: 700; overflow-wrap: anywhere; }
   footer { padding: 28px 0 40px; color: var(--muted); font-size: .9rem; }
 </style>
 <script type="application/ld+json">
@@ -217,8 +222,12 @@
   <section class="wrap" id="contact">
     <h2>Contact</h2>
     <p class="lead">Questions about my apps, feedback or a project in mind? Write to me.</p>
+    <ul class="mails">
+      <li><span>Clubhand</span><a href="mailto:hallo@clubhand.ch">hallo@clubhand.ch</a></li>
+      <li><span>NaviLog &amp; NaviLog Fleet</span><a href="mailto:hello@navilogfleet.ch">hello@navilogfleet.ch</a></li>
+      <li><span>Everything else</span><a href="mailto:baertschi91@gmail.com">baertschi91@gmail.com</a></li>
+    </ul>
     <div class="btns">
-      <a class="btn" href="mailto:baertschi91@gmail.com">baertschi91@gmail.com</a>
       <a class="btn ghost" href="https://www.linkedin.com/in/felix-baertschi">LinkedIn</a>
       <a class="btn ghost" href="https://github.com/Joogibaer">GitHub</a>
       <a class="btn ghost" href="https://medium.com/@baertschi91">Medium</a>
